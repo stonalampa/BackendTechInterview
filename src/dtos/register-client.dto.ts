@@ -7,6 +7,7 @@ import {
   IsArray,
   ArrayMinSize,
 } from 'class-validator';
+import { File } from 'multer';
 
 export class RegisterClientDto {
   @IsString()
@@ -35,6 +36,5 @@ export class RegisterClientDto {
 
   @IsArray()
   @ArrayMinSize(4, { message: 'At least 4 photos are required' })
-  @IsUrl({}, { each: true })
-  photos: string[];
+  photos: File[];
 }
