@@ -85,7 +85,8 @@ export class Client extends User {
   @BeforeInsert()
   setDefaultAvatar() {
     if (!this.avatar) {
-      this.avatar = 'default-avatar-url'; // Replace with a valid default avatar URL
+      this.avatar =
+        'https://gravatar.com/avatar/08f9267228ffc3bf9104f1ced5473a3c?s=400&d=robohash&r=x';
     }
   }
 }

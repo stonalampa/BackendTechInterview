@@ -8,7 +8,7 @@ import * as bcrypt from 'bcryptjs';
 import { JwtService } from '@nestjs/jwt';
 import * as AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
-import { Multer } from 'multer'; // Import the Multer namespace
+import { Multer } from 'multer';
 
 @Injectable()
 export class UserService {
@@ -27,7 +27,7 @@ export class UserService {
 
   async register(
     registerClientDto: RegisterClientDto,
-    photos: Multer.File[], // Add the Multer namespace to the 'photos' parameter
+    photos: Multer.File[],
   ): Promise<Client> {
     const { firstName, lastName, email, password, role, avatar } =
       registerClientDto;
